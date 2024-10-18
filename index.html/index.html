@@ -1,49 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD Basics</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <h1>Social Media App</h1>
-  <div class="container">
-    <div class="left">
-      <form id="form">
-        <label for="">Write your post here</label>
-        <br><br>
-        <textarea name="" id="input" cols="30" rows="10"></textarea>
-        <br><br>
-        <div id="msg"></div>
-        <button type="submit">Post</button>
-      </form>
+  <h3>CRUD Application</h3>
+  <form action="#" id="frm">
+    <input type="hidden" id="id" />
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Full Name"/>
     </div>
-    <div class="right">
-      <h3>Your posts here</h3>
-      <div id="posts">
-        <div>
-          <p>Post 1</p>
-          <span class="options">
-            <i onClick="editPost(this)" class="fas fa-edit"></i>
-            <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
-          </span>
-        </div>
-        <div>
-          <p>Post 2</p>
-          <span class="options">
-            <i onClick="editPost(this)" class="fas fa-edit"></i>
-            <i onClick="deletePost(this)" class="fas fa-trash-alt"></i>
-          </span>
-        </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="text" id="name" placeholder="Age" />
+    </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="name" placeholder="city"/>
       </div>
-    </div>
-  </div>
+      <button type="submit" class="btn"><ion-icon name="bookmark-outline"></ion-icon>Save</button>
+    </form>
+  <table>
+    <thread>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <th>Edit</th>
+    <th>Delete</th>
+   </thread>
+   <tbody>
+    <tr>
+      <td>1</td>
+      <td>Joes</td>
+      <td>35</td>
+      <td>Salem</td>
+      <td>
+        <button class="btn-edit">
+          <ion-icon name="create-outline"></ion-icon>
+        </button>
+      </td>
+      <td>
+        <button class="btn-delete"><ion-icon name="trash-outline"></ion-icon>
+      </button>
+    </td>
+    </tr>
+   </tbody>
+   <tbody>
+    <tr>
+      <td>2</td>
+      <td>Arun</td>
+      <td>20</td>
+      <td>chennai</td>
+      <td>
+        <button class="btn-edit">
+          <ion-icon name="create-outline"></ion-icon>
+        </button>
+      </td>
+      <td>
+        <button class="btn-delete"><ion-icon name="trash-outline"></ion-icon>
+      </button>
+    </td>
+    </tr>
+   </tbody>
+ </table>
+  <script src="js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-<script src="main.js"></script>
-
 </html>
